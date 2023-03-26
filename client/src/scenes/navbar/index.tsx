@@ -13,7 +13,7 @@ const Navbar = (props: Props) => {
     <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
       {/* LEFT SIDE */}
       <FlexBetween gap="0.75rem">
-        <PixIcon sx={{ fontSize: "28px" }} />
+        <PixIcon sx={{ fontSize: "28px", color: "#4BB8A9" }} />
         <Typography variant="h4" fontSize="16px">
           Treasury Analytics
         </Typography>
