@@ -22,9 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-
-console.log(process.env.MONGO_URL);
-console.log(process.env.PORT);
 /* MONGOOSE SETUP and App listener */
 
 const PORT = process.env.PORT || 9000;
