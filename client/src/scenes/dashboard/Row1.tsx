@@ -1,3 +1,4 @@
+import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
@@ -17,7 +18,6 @@ import {
   Area,
 } from "recharts";
 
-
 type Props = {};
 
 const Row1 = (props: Props) => {
@@ -29,30 +29,39 @@ const Row1 = (props: Props) => {
       data &&
       data[0].monthlyData.map(({ month, revenue }) => {
         return {
-          name: month.substring(0, 3),
+          name:
+            month.substring(0, 3).charAt(0).toUpperCase() +
+            month.substring(0, 3).slice(1),
           revenue: revenue,
         };
       })
-      );
-    }, [data]);
+    );
+  }, [data]);
 
   const revenueExpenses = useMemo(() => {
     return (
       data &&
       data[0].monthlyData.map(({ month, revenue, expenses }) => {
         return {
-          name: month.substring(0, 3).charAt(0).toUpperCase() + month.substring(0, 3).slice(1),
+          name:
+            month.substring(0, 3).charAt(0).toUpperCase() +
+            month.substring(0, 3).slice(1),
           revenue: revenue,
           expenses: expenses,
         };
       })
-      );
-    }, [data]);
+    );
+  }, [data]);
 
   return (
     <>
       <DashboardBox bgcolor="#fff" gridArea="a">
-      <ResponsiveContainer width="100%" height="100%">
+        <BoxHeader
+          title="Revenue and Expenses"
+          subtitle="top line represents revenue, bottom line represents expenses"
+          sideText="+4%"
+        />
+        <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             width={500}
             height={400}
