@@ -30,8 +30,8 @@ export interface ExpensesByCategory {
     expensesByCategory: ExpensesByCategory;
     monthlyData: Array<Month>;
     dailyData: Array<Day>;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
   }
 
   export interface GetProductsResponse {
@@ -41,8 +41,8 @@ export interface ExpensesByCategory {
     price: number;
     expense: number;
     transactions: Array<string>;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
   }
 
   export interface GetTransactionsResponse {
@@ -52,7 +52,7 @@ export interface ExpensesByCategory {
     buyer: string;
     amount: number;
     productIds: Array<string>;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
   }
   
