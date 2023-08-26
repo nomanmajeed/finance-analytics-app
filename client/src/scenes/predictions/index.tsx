@@ -60,7 +60,10 @@ const Predictions = () => {
             boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
           }}
         >
-          Show Predicted Revenue for Next Year
+           <Typography variant="h6" sx={{ fontSize: "13px", color: "#4BB8A9" }}>
+            {`${isPredictions? "Hide": "Show"} Predicted Revenue for Next Year`}
+          </Typography>
+         
         </Button>
       </FlexBetween>
       <ResponsiveContainer width="100%" height="100%">
