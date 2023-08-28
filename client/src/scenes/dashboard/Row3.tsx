@@ -159,16 +159,16 @@ const Row3 = (props: Props) => {
       </DashboardBox>
       <DashboardBox bgcolor="#fff" gridArea="i">
         <BoxHeader title="Expense Breakdown By Category" sideText="+4%" />
-        <FlexBetween gap="0.5rem" p="0 1rem" textAlign="center">
+        <FlexBetween gap="0.5rem" p="0 0.5rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
-              <PieChart width={110} height={100}>
+              <PieChart width={80} height={70}>
                 <Pie
                   stroke="none"
                   data={data}
                   innerRadius={18}
                   outerRadius={35}
-                  paddingAngle={2}
+                  paddingAngle={1}
                   dataKey="value"
                 >
                   {data.map((entry, index) => (
@@ -201,9 +201,7 @@ const Row3 = (props: Props) => {
         </Box>
         <Typography margin="0 1rem" variant="h6">
           Orci aliquam enim vel diam. Venenatis euismod id donec mus lorem etiam
-          ullamcorper odio sed. Ipsum non sed gravida etiam urna egestas
-          molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare
-          sed. In volutpat nullam at est id cum pulvinar nunc.
+          ullamcorper odio sed.
         </Typography>
       </DashboardBox>
     </>
