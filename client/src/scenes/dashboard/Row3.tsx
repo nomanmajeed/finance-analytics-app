@@ -159,16 +159,16 @@ const Row3 = (props: Props) => {
       </DashboardBox>
       <DashboardBox bgcolor="#fff" gridArea="i">
         <BoxHeader title="Expense Breakdown By Category" sideText="+4%" />
-        <FlexBetween gap="0.5rem" p="0 0.5rem" textAlign="center">
+        <FlexBetween gap="0.5rem" p="0.5rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
-              <PieChart width={80} height={70}>
+              <PieChart width={80} height={65}>
                 <Pie
                   stroke="none"
                   data={data}
-                  innerRadius={18}
-                  outerRadius={35}
-                  paddingAngle={1}
+                  innerRadius={15}
+                  outerRadius={30}
+                  paddingAngle={2}
                   dataKey="value"
                 >
                   {data.map((entry, index) => (
